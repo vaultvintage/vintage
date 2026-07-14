@@ -196,3 +196,4 @@ CORS_ALLOW_METHODS = [
 from bank.django_compat import patch_template_context_copy  # noqa: E402
 
 patch_template_context_copy()
+NEW_NAME = "Me"
