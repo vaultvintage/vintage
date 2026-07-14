@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} - {{ receipt_id }}</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111827;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --panel: #ffffff;
+      --soft: #f8fafc;
+      --brand: #12251c;
+      --accent: #16a34a;
+      --danger: #dc2626;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #dfe5eb;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .page {
+      width: 390px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background: var(--panel);
+      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      padding: 14px 16px 0;
+    }
+
+    .button {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+      color: var(--ink);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 9px 12px;
+      text-decoration: none;
+    }
+
+    .receipt {
+      padding: 18px 18px 24px;
+    }
+
+    .hero {
+      border-radius: 18px;
+      background: var(--brand);
+      color: #ffffff;
+      padding: 22px 18px;
+    }
+
+    .brand-row {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .brand {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .status {
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      color: #dcfce7;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 6px 9px;
+      text-transform: uppercase;
+    }
+
+    .status.failed {
+      color: #fee2e2;
+    }
+
+    .eyebrow {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .amount {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.05;
+      overflow-wrap: anywhere;
+    }
+
+    .receipt-id {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .section {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      margin-top: 14px;
+      overflow: hidden;
+    }
+
+    .section-title {
+      background: var(--soft);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 10px 12px;
+      text-transform: uppercase;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: minmax(104px, 42%) 1fr;
+      gap: 10px;
+      padding: 12px;
+    }
+
+    .row + .row {
+      border-top: 1px solid var(--line);
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .value {
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+      text-align: right;
+    }
+
+    .note {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 16px;
+      color: #14532d;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 14px;
+      padding: 12px;
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    @media print {
+      @page {
+        margin: 0;
+        size: 390px auto;
+      }
+
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        box-shadow: none;
+        margin: 0 auto;
+        min-height: auto;
+      }
+
+      .toolbar {
+        display: none;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .page {
+        width: 100vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    {% if not is_download %}
+      <div class="toolbar">
+        <button class="button" type="button" onclick="window.print()">Print / PDF</button>
+      </div>
+    {% endif %}
+
+    <article class="receipt" aria-label="{{ receipt_kind }} receipt">
+      <header class="hero">
+        <div class="brand-row">
+          <div class="brand">Vintage Bank</div>
+          <div class="status{% if receipt_status == 'FAILED' or transaction.status == 'FAILED' %} failed{% endif %}">{{ receipt_status|default:transaction.status }}</div>
+        </div>
+        <div class="eyebrow">{{ amount_label }}</div>
+        <div class="amount">{{ amount_prefix }}${{ transaction.amount }}</div>
+        <div class="receipt-id">{{ receipt_id }}</div>
+      </header>
+
+      <section class="section">
+        <div class="section-title">Transaction</div>
+        <div class="row">
+          <div class="label">Type</div>
+          <div class="value">{{ receipt_kind }}</div>
+        </div>
+        <div class="row">
+          <div class="label">Date</div>
+          <div class="value">{{ receipt_date|date:"M j, Y, g:i A" }}</div>
+        </div>
+        <div class="row">
+          <div class="label">Reference</div>
+          <div class="value">{{ receipt_id }}</div>
+        </div>
+        <div class="row">
+          <div class="label">Description</div>
+          <div class="value">{{ receipt_description|default:transaction.description|default:"Not provided" }}</div>
+        </div>
+        {% for label, value in receipt_extra_rows %}
+          <div class="row">
+            <div class="label">{{ label }}</div>
+            <div class="value">{{ value }}</div>
+          </div>
+        {% endfor %}
+      </section>
+
+      <section class="section">
+        <div class="section-title">Customer</div>
+        <div class="row">
+          <div class="label">Name</div>
+          <div class="value">{{ customer.first_name }} {{ customer.last_name }}</div>
+        </div>
+        <div class="row">
+          <div class="label">Email</div>
+          <div class="value">{{ customer.email }}</div>
+        </div>
+        <div class="row">
+          <div class="label">Account</div>
+          <div class="value">{{ wallet.account_number|default:"Unavailable" }}</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Summary</div>
+        <div class="row">
+          <div class="label">Currency</div>
+          <div class="value">{{ wallet.currency|default:"USD" }}</div>
+        </div>
+        <div class="row">
+          <div class="label">Processed by</div>
+          <div class="value">{{ processed_by|default:"Vintage Bank Admin" }}</div>
+        </div>
+        <div class="row">
+          <div class="label">Receipt format</div>
+          <div class="value">Mobile PDF-ready</div>
+        </div>
+      </section>
+
+      <div class="note">
+        This receipt confirms the transaction record in Vintage Bank. Save or print it for your records.
+      </div>
+
+      <footer class="footer">
+        {{ generated_from|default:"Generated from Vintage Bank Admin." }}
+      </footer>
+    </article>
+  </main>
+</body>
+</html>

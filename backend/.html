@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Verification Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0; padding:0; font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; background-color: #f8fafc;">
+  <!-- Main Container -->
+  <table width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; margin: 0 auto;">
+    <tr>
+      <td style="padding: 40px 20px;">
+        <!-- Card Container -->
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); overflow: hidden;">
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 32px 24px; text-align: center; border-bottom: 1px solid #f1f5f9;">
+              <img src="https://res.cloudinary.com/dn0mb0rti/image/upload/v1783891683/logo_uimerq.png" alt="Vintage Bank" style="height: 44px;">
+              <h1 style="margin: 24px 0 0; font-size: 22px; font-weight: 600; color: #1e293b;">Transfer Verification</h1>
+            </td>
+          </tr>
+          
+          <!-- Content -->
+          <tr>
+            <td style="padding: 32px;">
+              <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.5; color: #475569;">Dear {{ user.first_name }},</p>
+              
+              <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.5; color: #475569;">You are attempting to perform a transfer. Please use the verification code below to complete your request:</p>
+              
+              <!-- OTP Box -->
+              <div style="margin: 0 auto 32px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border: 1px dashed #e2e8f0; text-align: center; max-width: 280px;">
+                <span style="display: inline-block; font-size: 32px; font-weight: 700; letter-spacing: 8px; color: #1e293b; padding-left: 8px;">{{ otp }}</span>
+              </div>
+              
+              <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.5; color: #64748b;">
+                <strong style="color: #475569;">This code expires in 10 minutes.</strong> For your security, please do not share this code with anyone.
+              </p>
+              
+              <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #64748b;">
+                If you didn't request this code, please <a href="mailto:support@firstrevoluteinc.com" style="color: #3b82f6; text-decoration: none;">contact our support team</a> immediately.
+              </p>
+            </td>
+          </tr>
+          
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 24px 32px; background-color: #f8fafc; text-align: center;">
+              <p style="margin: 0 0 8px; font-size: 14px; color: #64748b;">Need help? Contact us at <a href="mailto:support@firstrevoluteinc.com" style="color: #3b82f6; text-decoration: none;">support@firstrevoluteinc.com</a></p>
+              <p style="margin: 0; font-size: 12px; color: #94a3b8;">&copy; {{ current_year|default:"2025" }} {{ company_name|default:"Vintage Bank" }}. All rights reserved.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

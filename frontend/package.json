@@ -1,0 +1,24 @@
+{
+  "name": "vintage-bank-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Elegant dark/neon-green banking dashboard for the Vintage Bank API",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^14.2.35",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.3"
+  }
+}
