@@ -50,8 +50,8 @@ export function MarketingFooter() {
           <div>
             <h4 style={{ fontSize: 14, color: "var(--text-0)", marginBottom: 16 }}>Contact Us</h4>
             <ul style={{ listStyle: "none", display: "grid", gap: 11, color: "var(--text-2)", fontSize: 14 }}>
-              <li>support@firstrevoluteinc.com</li>
-              <li className="mono">+1 555 0123</li>
+              <li>support@vintagevault.cloud</li>
+              <li className="mono">+44 791 561 3872</li>
               <li>Broadway Hall, Broadway,<br />Horsforth, Leeds LS18 4RS,<br />United Kingdom</li>
             </ul>
           </div>

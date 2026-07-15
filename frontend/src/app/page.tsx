@@ -259,8 +259,8 @@ export default function HomePage() {
             </div>
             <div className="grid gap-md">
               {[
-                { name: "Horsforth Head Office", addr: "Broadway Hall, Broadway, Horsforth, Leeds LS18 4RS, United Kingdom", phone: "+44 113 496 0000" },
-                { name: "24/7 Customer Support", addr: "Phone & live chat, every day of the week", phone: "+44 113 496 0001" },
+                { name: "Horsforth Head Office", addr: "Broadway Hall, Broadway, Horsforth, Leeds LS18 4RS, United Kingdom", phone: "+44 791 561 3872" },
+                { name: "24/7 Customer Support", addr: "Phone & live chat, every day of the week", phone: "+44 791 561 3872" },
               ].map((b) => (
                 <div key={b.name} className="card card-hover card-pad">
                   <span className="mkt-eyebrow" style={{ marginBottom: 8 }}>New Location</span>
@@ -332,7 +332,7 @@ export default function HomePage() {
               <h2 className="mkt-title" style={{ marginBottom: 14 }}>Get paid faster. Focus on what matters.</h2>
               <p style={{ color: "var(--text-1)", fontSize: 16, lineHeight: 1.7, marginBottom: 26, maxWidth: 460 }}>
                 We know B2B payments can be complex and a hassle. We've simplified the process with
-                FastPay — accept international payments in seconds.
+                FastPay — accept international payments in seconds. 
               </p>
               <Link href="/register" className="btn btn-primary">Create free account</Link>
             </div>
