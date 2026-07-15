@@ -197,7 +197,7 @@ export default function WithdrawalsPage() {
           ) : (
             <div className="grid gap-sm">
               {methodList.map((m) => (
-                <div key={m.id} style={{ padding: 12, borderRadius: 12, border: "1px solid var(--border)", background: "rgba(4,8,12,0.4)" }}>
+                <div key={m.id} style={{ padding: 12, borderRadius: 12, border: "1px solid var(--border)", background: "var(--sunken)" }}>
                   <div className="flex items-center justify-between">
                     <span style={{ fontWeight: 600, color: "var(--text-0)" }}>{m.currency}</span>
                     <span className="badge badge-success"><span className="badge-dot" />{m.network}</span>
@@ -225,7 +225,7 @@ export default function WithdrawalsPage() {
         .receipt-frame { width: 100%; height: min(72vh, 760px); border: 1px solid var(--border); border-radius: 14px; background: #fff; }
         .wd-mobile-list { display: none; }
         .wd-actions { display: inline-flex; gap: 8px; justify-content: flex-end; }
-        .wd-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: rgba(4,8,12,0.38); }
+        .wd-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--sunken); }
         .wd-card + .wd-card { margin-top: 12px; }
         .wd-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
         .wd-title { color: var(--text-0); font-weight: 700; }

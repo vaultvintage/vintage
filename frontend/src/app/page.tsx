@@ -81,7 +81,7 @@ export default function HomePage() {
         />
         <div className="shell" style={{ paddingTop: 72, paddingBottom: 80, position: "relative" }}>
           <div className="hero-grid">
-            <div className="fade-up" key={slide}>
+            <div className="fade-up on-dark" key={slide}>
               <span className="mkt-eyebrow">{active.eyebrow}</span>
               <h1 style={{ fontSize: "clamp(38px, 6vw, 62px)", lineHeight: 1.05, marginBottom: 20, textShadow: "0 2px 30px rgba(0,0,0,0.6)" }}>
                 {active.title.split(" ").slice(0, -1).join(" ")}{" "}

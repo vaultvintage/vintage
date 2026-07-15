@@ -15,7 +15,7 @@ export function MarketingFooter() {
   const [done, setDone] = useState(false);
 
   return (
-    <footer style={{ borderTop: "1px solid var(--border)", background: "rgba(4,7,11,0.85)" }}>
+    <footer style={{ borderTop: "1px solid var(--border)", background: "var(--section-dark)" }}>
       <div className="shell" style={{ paddingTop: 56, paddingBottom: 40 }}>
         <div className="footer-grid">
           <div>

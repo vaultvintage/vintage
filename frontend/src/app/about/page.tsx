@@ -62,7 +62,7 @@ export default function AboutPage() {
         />
         <div className="shell" style={{ position: "relative", paddingTop: 72, paddingBottom: 72 }}>
           <div className="about-hero">
-            <div className="fade-up">
+            <div className="fade-up on-dark">
               <span className="badge badge-success" style={{ marginBottom: 20 }}>
                 <span className="badge-dot" /> Trusted by 2.5M+ worldwide
               </span>

@@ -225,7 +225,7 @@ export default function TransfersPage() {
       </div>
 
       <style>{`
-        .mode-switch { display: inline-flex; gap: 4px; padding: 5px; border-radius: 14px; border: 1px solid var(--border); background: rgba(4,8,12,0.5); }
+        .mode-switch { display: inline-flex; gap: 4px; padding: 5px; border-radius: 14px; border: 1px solid var(--border); background: var(--sunken); }
         .mode { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 10px; font-size: 14px; font-weight: 600; color: var(--text-2); cursor: pointer; background: transparent; border: none; transition: all 0.2s var(--ease); }
         .mode:hover { color: var(--text-0); }
         .mode[data-active="true"] { color: var(--neon-bright); background: rgba(61,255,154,0.1); }

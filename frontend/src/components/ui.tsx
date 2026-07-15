@@ -165,7 +165,7 @@ export function Modal({
         position: "fixed",
         inset: 0,
         zIndex: 100,
-        background: "rgba(2, 5, 8, 0.72)",
+        background: "var(--overlay)",
         backdropFilter: "blur(6px)",
         display: "flex",
         alignItems: "center",

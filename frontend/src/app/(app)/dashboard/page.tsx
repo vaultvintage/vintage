@@ -280,7 +280,7 @@ function MiniCard({ card, loading }: { card?: VirtualCard; loading: boolean }) {
       style={{
         padding: 22,
         minHeight: 190,
-        background: "#0c1712",
+        background: "var(--sunken)",
         position: "relative",
       }}
     >

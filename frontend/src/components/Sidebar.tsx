@@ -16,6 +16,7 @@ import {
 } from "./Icons";
 import { useAuth } from "@/lib/auth";
 import { initials } from "@/lib/format";
+import { ThemeToggle } from "./ThemeToggle";
 
 const NAV = [
   { href: "/dashboard", label: "Overview", icon: <IconDashboard /> },
@@ -65,6 +66,10 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           );
         })}
       </nav>
+
+      <div style={{ padding: "0 4px 14px", display: "flex", justifyContent: "center" }}>
+        <ThemeToggle compact />
+      </div>
 
       <div
         className="card"

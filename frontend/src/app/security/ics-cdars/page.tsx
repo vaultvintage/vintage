@@ -74,7 +74,7 @@ export default function IcsCdarsPage() {
                     style={{
                       display: "inline-flex", width: 72, height: 72, borderRadius: "50%",
                       alignItems: "center", justifyContent: "center",
-                      background: "var(--neon)", color: "#04140c", marginBottom: 14,
+                      background: "var(--neon)", color: "var(--accent-ink)", marginBottom: 14,
                       boxShadow: "0 0 30px var(--neon-glow)",
                     }}
                   >

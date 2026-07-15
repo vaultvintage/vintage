@@ -75,7 +75,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         .app-sidebar {
           position: sticky; top: 0; height: 100vh;
           border-right: 1px solid var(--border);
-          background: rgba(7, 11, 17, 0.6);
+          background: var(--nav-bg);
           backdrop-filter: blur(12px);
         }
         .app-main { display: flex; flex-direction: column; min-width: 0; }
@@ -84,12 +84,12 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           display: flex; align-items: center; gap: 14px;
           padding: 16px 28px;
           border-bottom: 1px solid var(--border);
-          background: rgba(7, 11, 17, 0.72);
+          background: var(--nav-bg);
           backdrop-filter: blur(12px);
         }
         .app-content { padding: 32px 28px 60px; max-width: 1180px; width: 100%; margin: 0 auto; }
         .mobile-only { display: none; }
-        .drawer-overlay { position: fixed; inset: 0; z-index: 40; background: rgba(2,5,8,0.7); backdrop-filter: blur(4px); }
+        .drawer-overlay { position: fixed; inset: 0; z-index: 40; background: var(--overlay); backdrop-filter: blur(4px); }
         .drawer {
           position: fixed; top: 0; left: 0; bottom: 0; z-index: 50; width: 280px;
           border-radius: 0 18px 18px 0;

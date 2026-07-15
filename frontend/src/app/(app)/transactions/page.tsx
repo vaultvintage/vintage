@@ -105,7 +105,7 @@ export default function TransactionsPage() {
       </Modal>
 
       <style>{`
-        .tabbar { display: inline-flex; gap: 4px; padding: 5px; border-radius: 14px; border: 1px solid var(--border); background: rgba(4,8,12,0.5); flex-wrap: wrap; }
+        .tabbar { display: inline-flex; gap: 4px; padding: 5px; border-radius: 14px; border: 1px solid var(--border); background: var(--sunken); flex-wrap: wrap; }
         .tab { padding: 9px 16px; border-radius: 10px; font-size: 13.5px; font-weight: 600; color: var(--text-2); cursor: pointer; background: transparent; border: none; transition: all 0.2s var(--ease); }
         .tab:hover { color: var(--text-0); }
         .tab[data-active="true"] { color: var(--neon-bright); background: rgba(61,255,154,0.1); }

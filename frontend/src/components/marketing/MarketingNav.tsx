@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useAuth } from "@/lib/auth";
 import { BrandWord } from "@/components/Brand";
 import { IconGlobe, IconMenu, IconClose } from "@/components/Icons";
+import { ThemeToggle, ThemeSwitch } from "@/components/ThemeToggle";
 
 const PERSONAL: [string, string, string][] = [
   ["Personal Checking", "Everyday spending, zero friction", "/personal/checking"],
@@ -63,6 +64,7 @@ export function MarketingNav() {
         </div>
 
         <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 12 }}>
+          <span className="desktop-only"><ThemeSwitch /></span>
           <button className="lang-pill desktop-only" title="Select language">
             <IconGlobe width={15} height={15} /> EN
           </button>
@@ -92,6 +94,10 @@ export function MarketingNav() {
           {SECURITY.map(([t, , href]) => (
             <Link key={t} href={href} onClick={() => setOpen(false)}>{t}</Link>
           ))}
+          <div style={{ padding: "16px 16px 4px", color: "var(--text-3)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.1em" }}>Theme</div>
+          <div style={{ padding: "0 16px" }}>
+            <ThemeToggle />
+          </div>
           <div style={{ marginTop: 16 }}>
             <Link href={user ? "/dashboard" : "/login"} className="btn btn-primary btn-block" onClick={() => setOpen(false)}>
               {user ? "Go to dashboard" : "Login"}
