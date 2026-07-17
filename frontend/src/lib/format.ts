@@ -1,13 +1,17 @@
+// The app is single-currency (GBP). We intentionally ignore any currency code
+// coming from stored data so legacy "USD" wallets never render a "$" again.
+export const CURRENCY_CODE = "GBP";
+
 export function formatCurrency(
   value: string | number,
-  currency = "GBP"
+  _currency = CURRENCY_CODE
 ): string {
   const num = typeof value === "string" ? parseFloat(value) : value;
   if (Number.isNaN(num)) return "—";
   try {
     return new Intl.NumberFormat("en-GB", {
       style: "currency",
-      currency,
+      currency: CURRENCY_CODE,
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     }).format(num);

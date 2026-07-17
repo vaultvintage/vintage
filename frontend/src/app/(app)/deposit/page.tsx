@@ -76,7 +76,7 @@ export default function DepositPage() {
   const history = asList<CreditTransaction>(credits.data)
     .slice()
     .sort((a, b) => +new Date(b.transaction_date) - +new Date(a.transaction_date));
-  const currency = wallet.data?.currency || "GBP";
+  const currency = "GBP";
 
   const assets: AssetOption[] = useMemo(() => {
     const list = asList<PaymentMethod>(methods.data).map((m) => ({
