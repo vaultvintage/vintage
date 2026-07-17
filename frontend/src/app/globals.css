@@ -373,6 +373,32 @@ a { color: inherit; text-decoration: none; }
 .mc-marks span:first-child { background: #eb001b; }
 .mc-marks span:last-child { background: #f79e1b; margin-left: -11px; mix-blend-mode: hard-light; }
 
+/* ---------- Entry gate ---------- */
+.gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg-1);
+}
+.gate-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 34px 28px;
+  text-align: center;
+  background: var(--panel-solid);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: fadeUp 0.4s var(--ease) both;
+}
+.gate-q { font-size: 22px; margin-bottom: 24px; }
+.gate-actions { display: flex; gap: 12px; justify-content: center; }
+.gate-actions .btn { min-width: 100px; }
+
 /* ---------- Theme segmented control ---------- */
 .theme-seg {
   display: inline-flex;

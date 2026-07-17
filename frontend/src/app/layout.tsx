@@ -3,6 +3,7 @@ import "./globals.css";
 import { AuthProvider } from "@/lib/auth";
 import { ToastProvider } from "@/components/Toast";
 import { ThemeProvider, themeInitScript } from "@/lib/theme";
+import { EnterGate } from "@/components/EnterGate";
 
 export const metadata: Metadata = {
   title: "Vintage Bank — Private Bank",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <div className="grid-bg" />
         <div className="grid-glow" />
         <ThemeProvider>
+          <EnterGate />
           <ToastProvider>
             <AuthProvider>{children}</AuthProvider>
           </ToastProvider>
