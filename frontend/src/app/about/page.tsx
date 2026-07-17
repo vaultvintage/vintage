@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const STATS = [
   { icon: <IconUser width={20} height={20} />, value: "2,500,000+", label: "Happy Customers" },
   { icon: <IconGlobe width={20} height={20} />, value: "150+", label: "Countries Served" },
-  { icon: <IconChart width={20} height={20} />, value: "$50B+", label: "Assets Managed" },
+  { icon: <IconChart width={20} height={20} />, value: "£50B+", label: "Assets Managed" },
   { icon: <IconShield width={20} height={20} />, value: "99%", label: "Uptime Rate" },
 ];
 
@@ -36,7 +36,7 @@ const MILESTONES = [
   { year: "2018", t: "The Dream Begins", d: "Founded with a vision to democratize banking for everyone." },
   { year: "2019", t: "First Million", d: "Reached 1M users and launched our mobile banking app." },
   { year: "2020", t: "Going Global", d: "Expanded to 50+ countries across 4 continents." },
-  { year: "2021", t: "$200M Series B", d: "Secured funding from top-tier VCs to accelerate growth." },
+  { year: "2021", t: "£200M Series B", d: "Secured funding from top-tier VCs to accelerate growth." },
   { year: "2022", t: "AI Revolution", d: "Launched an AI-powered financial advisor and smart insights." },
   { year: "2023", t: "2.5M Strong", d: "Celebrating our global community of pioneers." },
 ];
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 while keeping fees transparent and support human.
               </p>
               <div className="flex gap-md wrap">
-                <span className="badge badge-success"><span className="badge-dot" /> FDIC Insured up to $250,000</span>
+                <span className="badge badge-success"><span className="badge-dot" /> FDIC Insured up to £250,000</span>
                 <span className="badge badge-success"><span className="badge-dot" /> Bank-Grade 256-bit Encryption</span>
               </div>
             </div>

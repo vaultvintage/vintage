@@ -30,17 +30,17 @@ const DETAILS = [
   {
     name: "Wise Checking",
     lede: "Something basic, something easy, something wise.",
-    body: "Minimum $50 deposit to open. No minimum balance required. No monthly service charges. Unlimited check-writing benefits.",
+    body: "Minimum £50 deposit to open. No minimum balance required. No monthly service charges. Unlimited check-writing benefits.",
   },
   {
     name: "Premier Checking",
     lede: "All the convenience of full-featured checking with added interest benefits.",
-    body: "$50 deposit to open. Maintain $1,000 daily for interest. To avoid a $25.00 monthly service charge, maintain a daily balance of $1,000.",
+    body: "£50 deposit to open. Maintain £1,000 daily for interest. To avoid a £25.00 monthly service charge, maintain a daily balance of £1,000.",
   },
   {
     name: "Classic Checking",
     lede: "For those 55+ seeking simplicity and value.",
-    body: "$50 deposit to open. Maintain $500 daily for interest. Includes free standard checks for life. Avoid a $25.00 monthly service charge by maintaining a $500 balance.",
+    body: "£50 deposit to open. Maintain £500 daily for interest. Includes free standard checks for life. Avoid a £25.00 monthly service charge by maintaining a £500 balance.",
   },
 ];
 

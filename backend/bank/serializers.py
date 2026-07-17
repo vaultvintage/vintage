@@ -252,7 +252,7 @@ class LoanSerializer(serializers.ModelSerializer):
 
 
         if wallet.balance < 1000:
-            raise ValidationError("You must have at least $1000 in your wallet to apply for a loan.")
+            raise ValidationError("You must have at least £1000 in your wallet to apply for a loan.")
 
         return data
 

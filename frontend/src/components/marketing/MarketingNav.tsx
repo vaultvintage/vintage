@@ -14,7 +14,7 @@ const PERSONAL: [string, string, string][] = [
   ["Virtual Cards", "Issue in seconds", "/login"],
 ];
 const SECURITY: [string, string, string][] = [
-  ["ICS/CDARS FDIC Coverage", "Protection beyond $250,000", "/security/ics-cdars"],
+  ["ICS/CDARS FDIC Coverage", "Protection beyond £250,000", "/security/ics-cdars"],
   ["Anti-Fraud Protection", "Real-time monitoring", "/security/ics-cdars"],
   ["256-bit Encryption", "Bank-grade security", "/security/ics-cdars"],
 ];

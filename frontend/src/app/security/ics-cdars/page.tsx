@@ -8,7 +8,7 @@ import { IMG, bgImage } from "@/lib/images";
 export const metadata: Metadata = {
   title: "ICS/CDARS FDIC Coverage — Vintage Bank",
   description:
-    "Extend your FDIC coverage beyond $250,000 with ICS® and CDARS® through Vintage Bank.",
+    "Extend your FDIC coverage beyond £250,000 with ICS® and CDARS® through Vintage Bank.",
 };
 
 const BENEFITS = [
@@ -20,7 +20,7 @@ const BENEFITS = [
 ];
 
 const FAQS = [
-  { q: "Why ICS?", a: "ICS gives you access to multi-million-dollar FDIC protection through a single relationship with Vintage Bank, while keeping your funds working and accessible." },
+  { q: "Why ICS?", a: "ICS gives you access to multi-million-pound FDIC protection through a single relationship with Vintage Bank, while keeping your funds working and accessible." },
   { q: "How can deposits greater than the standard FDIC insurance maximum be eligible for insurance by the FDIC?", a: "Through ICS, funds are placed with other institutions participating in IntraFi's network. Those network members provide access to FDIC coverage on deposits at their banks, so working with just our bank, you can access coverage through many." },
   { q: "How often can I access my funds?", a: "With demand and money market deposit account placements you enjoy convenient access to your funds, subject to program limits on certain withdrawal types." },
   { q: "How can I tell how many withdrawals I've made / have left in a given month?", a: "Your monthly statements and online banking clearly show your activity and any remaining withdrawals for money market deposit account placements." },
@@ -34,7 +34,7 @@ export default function IcsCdarsPage() {
     <MarketingShell>
       <PageHero
         title="ICS/CDARS FDIC Coverage"
-        subtitle="Multi-million-dollar FDIC protection through a single, simple relationship."
+        subtitle="Multi-million-pound FDIC protection through a single, simple relationship."
         crumb="Security · ICS/CDARS"
         image={IMG.vault}
       />
@@ -44,10 +44,10 @@ export default function IcsCdarsPage() {
           {/* Main */}
           <div>
             <span className="mkt-eyebrow">FDIC Protection</span>
-            <h2 className="mkt-title" style={{ marginBottom: 14 }}>Extend Your FDIC Coverage Beyond $250,000</h2>
+            <h2 className="mkt-title" style={{ marginBottom: 14 }}>Extend Your FDIC Coverage Beyond £250,000</h2>
             <p style={{ color: "var(--text-1)", fontSize: 16, lineHeight: 1.7, marginBottom: 28 }}>
               With <strong className="text-neon">ICS®</strong> and <strong className="text-neon">CDARS®</strong>, you can
-              access multi-million-dollar FDIC protection by working directly with your Customer Service
+              access multi-million-pound FDIC protection by working directly with your Customer Service
               Representatives at Vintage Bank.
             </p>
 
@@ -130,7 +130,7 @@ export default function IcsCdarsPage() {
             funds through ICS or CDARS satisfies those restrictions.
           </p>
           <p style={{ marginBottom: 14 }}>
-            ² When deposited funds are exchanged on a dollar-for-dollar basis with other institutions that
+            ² When deposited funds are exchanged on a pound-for-pound basis with other institutions that
             use ICS or CDARS, our bank can use the full amount of a deposit for local lending, satisfying
             some depositors' local investment goals or mandates.
           </p>

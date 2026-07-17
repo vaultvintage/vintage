@@ -29,7 +29,7 @@ export default function CardsPage() {
     try {
       await api.createCard(provider);
       setOpen(false);
-      setNotice("Virtual card created — $5.00 was deducted from your wallet.");
+      setNotice("Virtual card created — £5.00 was deducted from your wallet.");
       toast.success("Card created", `Your new ${provider} card is ready.`);
       cards.reload();
     } catch (err) {
@@ -47,7 +47,7 @@ export default function CardsPage() {
         <div>
           <span className="eyebrow">Spend</span>
           <h1 style={{ marginTop: 8 }}>Virtual cards</h1>
-          <p>Issue a card in seconds. A $5.00 fee applies at creation.</p>
+          <p>Issue a card in seconds. A £5.00 fee applies at creation.</p>
         </div>
         <button className="btn btn-primary" onClick={() => { setError(""); setOpen(true); }}>
           <IconPlus width={16} height={16} /> New card
@@ -82,7 +82,7 @@ export default function CardsPage() {
       <Modal open={open} onClose={() => setOpen(false)} title="Create a virtual card">
         {error && <Alert>{error}</Alert>}
         <form onSubmit={create}>
-          <Field label="Card network" hint="A $5.00 issuance fee is charged to your wallet.">
+          <Field label="Card network" hint="A £5.00 issuance fee is charged to your wallet.">
             <select className="select" value={provider} onChange={(e) => setProvider(e.target.value)}>
               {PROVIDERS.map((p) => <option key={p} value={p}>{p}</option>)}
             </select>

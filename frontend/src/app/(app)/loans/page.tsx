@@ -68,7 +68,7 @@ export default function LoansPage() {
         <div>
           <span className="eyebrow">Borrow</span>
           <h1 style={{ marginTop: 8 }}>Loans</h1>
-          <p>Purpose-based lending. Requires a wallet balance of at least $1,000.</p>
+          <p>Purpose-based lending. Requires a wallet balance of at least £1,000.</p>
         </div>
         <button className="btn btn-primary" onClick={() => { setError(""); setOpen(true); }}>
           <IconPlus width={16} height={16} /> Apply for loan
@@ -136,7 +136,7 @@ export default function LoansPage() {
             </select>
           </Field>
           <p style={{ fontSize: 12.5, color: "var(--text-3)", marginBottom: 16 }}>
-            Rates: ≤$5k → 5% · ≤$20k → 3.5% · ≤$50k → 2.5% · above → 1.5%.
+            Rates: ≤£5k → 5% · ≤£20k → 3.5% · ≤£50k → 2.5% · above → 1.5%.
           </p>
           <button className="btn btn-primary btn-block" disabled={busy}>
             {busy ? <span className="spinner" /> : "Submit application"}

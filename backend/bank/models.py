@@ -183,7 +183,7 @@ class Wallet(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name="wallet")
     account_number = models.CharField(max_length=10, unique=True, blank=True)
     balance = models.DecimalField(max_digits=15, decimal_places=2, default=0.00)
-    currency = models.CharField(max_length=3, default="USD")
+    currency = models.CharField(max_length=3, default="GBP")
 
     def __str__(self):
         return f"{self.user.email}'s Wallet - Balance: {self.balance} {self.currency}"

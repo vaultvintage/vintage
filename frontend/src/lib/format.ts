@@ -1,18 +1,18 @@
 export function formatCurrency(
   value: string | number,
-  currency = "USD"
+  currency = "GBP"
 ): string {
   const num = typeof value === "string" ? parseFloat(value) : value;
   if (Number.isNaN(num)) return "—";
   try {
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat("en-GB", {
       style: "currency",
       currency,
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     }).format(num);
   } catch {
-    return `$${num.toFixed(2)}`;
+    return `£${num.toFixed(2)}`;
   }
 }
 

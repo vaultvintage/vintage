@@ -58,7 +58,7 @@ export default function DashboardPage() {
     .sort((a, b) => +new Date(b.date) - +new Date(a.date))
     .slice(0, 6);
 
-  const currency = wallet.data?.currency || "USD";
+  const currency = wallet.data?.currency || "GBP";
   // A 404 means "no wallet yet" (offer to create); anything else is a real failure.
   const noWallet = !wallet.loading && !wallet.data && wallet.kind === "notfound";
   const walletFailed = !wallet.loading && !wallet.data && !!wallet.kind && wallet.kind !== "notfound";

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const HELOAN = [
   "A loan which is fully disbursed at closing & repaid over the term requested.",
-  "Minimum loan amount is $10,000",
+  "Minimum loan amount is £10,000",
   "Maximum term of 240 months",
   "Interest is fixed for the term",
   "No application fee*",
@@ -21,7 +21,7 @@ const HELOAN = [
 ];
 
 const HELOC = [
-  "Minimum loan amount is $10,000",
+  "Minimum loan amount is £10,000",
   "Competitive interest rates",
   "No application fee*",
   "Early termination fee if paid off or refinanced within 24 months of settlement",
@@ -86,7 +86,7 @@ export default function LendingPage() {
               <p className="lede">Flexible borrowing to finance short-term needs.</p>
               <ul className="bullet-list" style={{ marginTop: 8 }}>
                 <li><span className="b-tick"><IconCheck width={17} height={17} /></span> Secured by a CD or Savings Account</li>
-                <li><span className="b-tick"><IconCheck width={17} height={17} /></span> Minimum amount $5,000</li>
+                <li><span className="b-tick"><IconCheck width={17} height={17} /></span> Minimum amount £5,000</li>
               </ul>
               <p style={{ marginTop: 14, color: "var(--text-2)" }}>Please contact your local Customer Service Representative for more details.</p>
               <Link href="/loans" className="btn btn-ghost" style={{ marginTop: 16 }}>View loan rates</Link>
@@ -130,7 +130,7 @@ export default function LendingPage() {
                 <h4 style={{ fontSize: 17, marginBottom: 8 }}>Checking that's Wise.</h4>
                 <p style={{ color: "var(--text-2)", fontSize: 13.5, lineHeight: 1.6, marginBottom: 14 }}>
                   Something basic, something easy… something wise. Already packed with great features — you
-                  can receive $100 when you open a Wise Checking Account.*
+                  can receive £100 when you open a Wise Checking Account.*
                 </p>
                 <Link href="/personal/checking" className="btn btn-ghost btn-sm">Wise Checking</Link>
               </div>

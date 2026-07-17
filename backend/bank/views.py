@@ -494,7 +494,7 @@ class WalletAPIView(APIView):
         data = {
             'user': request.user.id,  # Automatically associate wallet with the authenticated user
             'balance': 0.00,
-            'currency': 'USD',
+            'currency': 'GBP',
         }
         serializer = WalletSerializer(data=data)
         if serializer.is_valid():

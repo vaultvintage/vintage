@@ -221,7 +221,7 @@
           <div class="status{% if receipt_status == 'FAILED' or transaction.status == 'FAILED' %} failed{% endif %}">{{ receipt_status|default:transaction.status }}</div>
         </div>
         <div class="eyebrow">{{ amount_label }}</div>
-        <div class="amount">{{ amount_prefix }}${{ transaction.amount }}</div>
+        <div class="amount">{{ amount_prefix }}£{{ transaction.amount }}</div>
         <div class="receipt-id">{{ receipt_id }}</div>
       </header>
 
@@ -271,7 +271,7 @@
         <div class="section-title">Summary</div>
         <div class="row">
           <div class="label">Currency</div>
-          <div class="value">{{ wallet.currency|default:"USD" }}</div>
+          <div class="value">{{ wallet.currency|default:"GBP" }}</div>
         </div>
         <div class="row">
           <div class="label">Processed by</div>
