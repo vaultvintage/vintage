@@ -354,7 +354,7 @@ class PasswordResetRequestSerializer(serializers.Serializer):
 
         uid = urlsafe_base64_encode(force_bytes(user.pk))
         token = default_token_generator.make_token(user)
-        reset_url = f"https://vintagebank.com/password-reset/{uid}/{token}/"
+        reset_url = f"https://vintagefort.com/password-reset/{uid}/{token}/"
 
         # Context for the template
         context = {

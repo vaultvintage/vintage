@@ -28,7 +28,14 @@ SECRET_KEY = 'django-insecure-8k)!_pzh^^%id&pe5%h^m+71fp)6os#11^@=)m-7cust7)#jic
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'vintagefort.com',
+    'www.vintagefort.com',
+    'api.vintagefort.com',
+    '.vercel.app',        # Vercel preview/production deployment URLs
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -158,8 +165,8 @@ EMAIL_HOST = 'starlord.globaldnsnetwork.com'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
-EMAIL_HOST_USER = 'noreply@vintagevault.cloud'  
-EMAIL_HOST_PASSWORD = '4NnegY7hpmXUv_s'  
+EMAIL_HOST_USER = 'noreply@vintagevault.cloud'
+EMAIL_HOST_PASSWORD = '4NnegY7hpmXUv_s'
 DEFAULT_FROM_EMAIL = 'Vintage Bank <noreply@vintagevault.cloud>'
 
 COMPANY_EMAIL = 'noreply@vintagevault.cloud'
@@ -179,7 +186,24 @@ SIMPLE_JWT = {
 }
 
 
-CORS_ALLOW_ALL_ORIGINS = True
+# Restrict browser cross-origin requests to the vintagefort.com frontend.
+CORS_ALLOWED_ORIGINS = [
+    "https://vintagefort.com",
+    "https://www.vintagefort.com",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+# Allow Vercel preview deployments (e.g. vintage-xxxx.vercel.app) to call the API.
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.vercel\.app$",
+]
+
+# Required for Django admin/session POSTs served over the new domain.
+CSRF_TRUSTED_ORIGINS = [
+    "https://vintagefort.com",
+    "https://www.vintagefort.com",
+    "https://api.vintagefort.com",
+]
 
 CORS_ALLOW_METHODS = [
     "GET",
